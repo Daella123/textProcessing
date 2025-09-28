@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+      This Maven configuration defines a simple JavaFX application.  The
+      project uses the OpenJFX libraries available from Maven Central to
+      provide the graphical user interface components.  The javafx-maven
+      plugin is configured to allow the application to be launched via
+      `mvn javafx:run`, making it easy to develop and test the program.
+    -->
+    <groupId>com.example</groupId>
+    <artifactId>text-processing-tool</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Text Processing Tool</name>
+    <packaging>jar</packaging>
+
+    <properties>
+        <!--
+          Use a recent LTS release of JavaFX.  Version 21.0.4 (released in
+          July 2024) is compatible with JDK 21 and is still actively
+          maintained.  Newer major releases such as 24 or 25 require JDK 22
+          or later, so if you are using JDK 21 it is safer to stick with
+          an LTS release.  See the OpenJFX roadmap for details【256971931758515†L91-L100】.
+        -->
+        <javafx.version>21.0.4</javafx.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- JavaFX UI controls such as buttons, tables, lists, etc. -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <!-- JavaFX FXML (not used directly but included for completeness) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--
+              The javafx‑maven‑plugin simplifies running and packaging JavaFX
+              applications.  It automatically adds the necessary module
+              arguments when launching your app.  The plugin version 0.0.8
+              supports recent JavaFX releases and works with JDK 17 and above.
+            -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>com.example.MainApp</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
