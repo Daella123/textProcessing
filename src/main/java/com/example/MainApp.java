@@ -25,15 +25,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- * The {@code MainApp} class sets up the JavaFX user interface and
- * orchestrates interactions between the regex utilities and the data
- * management components.  It contains two tabs: one for regular
- * expression search/replace operations and another for managing a
- * collection of key–value pairs.  Each tab provides controls for
- * entering data, executing actions, and displaying results to the
- * user.
- */
+
 public class MainApp extends Application {
     /**
      * Manages the collection of data entries used by the data tab.

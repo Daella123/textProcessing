@@ -5,14 +5,7 @@ import javafx.beans.property.StringProperty;
 
 import java.util.Objects;
 
-/**
- * Represents a key–value pair within the data management module.  This
- * class exposes JavaFX properties to integrate easily with table views
- * and other UI components.  Keys are unique identifiers used by
- * {@code DataManager} to store entries in a map.  Equality and
- * hashing are based solely on the key so that two entries with the
- * same key are considered equal regardless of their values.
- */
+
 public class DataEntry {
     private final StringProperty key;
     private final StringProperty value;
